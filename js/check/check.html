@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+    检测浏览器是否支持 audio 元素或 video 元素最简单的方式是用脚本动态创建它，然后检测特定函数是否存在：
+-->
+<script>
+    // 这段脚本会动态创建一个 video 元素，然后检查 canPlayType() 函数是否存在。
+    // 通过 "!!" 运算符将结果转换成布尔值，就可以反映出视频对象是否已经创建成功。
+    var hasVideo = !!(document.createElement('video').canPlayType);
+</script>
+</body>
+</html>
