@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>support</title>
+</head>
+<body>
+<!--
+    canPlayType(type) 函数有一个特殊的用途：向动态创建的 video 元素传入某段视频的 MIME 类型后，
+    仅仅通过一行脚本语句即可获得当前浏览器对相关视频类型的支持情况。
+    例如，下面的代码可以快速判断当前浏览器是否支持播放 fooType 类型的视频，而无需在浏览器窗口中显示
+    任何内容：
+-->
+
+<script>
+    var supportsFooVideo = !!(document.createElement('video').canPlayType('fooType'));
+</script>
+
+</body>
+</html>
