@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function want() {
+        console.log('2.这是你想要执行的代码');
+    }
+
+    function fn(want) {
+        // 将想要执行的代码放入队列中，根据事件循环的机制，我们就不用非得将它放到最后面了，由你自由选择
+        want && setTimeout(want, 0);
+        console.log('1.这里表示执行了一大堆各种代码');
+    }
+
+    fn(want);
+</script>
+</body>
+</html>
